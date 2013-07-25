@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background: #eee;
+  font-family: trebuchet ms;
+  color: #0089e0;
+  text-shadow: 1px 1px 1px #555;
+}
+
+#info {
+  text-align: center;
+  font-size: 40px;
+}
+
+#heart {
+  position: absolute;
+}
