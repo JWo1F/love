@@ -53,8 +53,3 @@ else {
     }
   }, 1000);
 }
-
-$('skip').onclick = function () {
-  localStorage.read = true;
-  location.reload();
-}
