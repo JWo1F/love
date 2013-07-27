@@ -38,13 +38,13 @@ else {
   $('timer').innerHTML = minutes + ':' + seconds;
   
   var timer = setInterval(function () {
+    lost -= 1000;
+    localStorage.lost = lost;
     seconds = Math.floor(lost/1000 % 60);
     minutes = Math.floor(lost/1000/60 % 60);
     if (seconds.toString().length == 1) seconds = '0' + seconds;
     if (minutes.toString().length == 1) minutes = '0' + minutes;
     $('timer').innerHTML = minutes + ':' + seconds;
-    lost -= 1000;
-    localStorage.lost = lost;
     if (lost <= 0) {
       clearInterval(timer);
       localStorage.read = true;
