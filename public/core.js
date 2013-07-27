@@ -30,9 +30,16 @@ if (localStorage.read) block.display = 'none';
 else {
   var lost = localStorage.lost || 1000 * 60 * 5;
   
+  var seconds = Math.floor(lost/1000 % 60);
+  var minutes = Math.floor(lost/1000/60 % 60);
+  if (seconds.toString().length == 1) seconds = '0' + seconds;
+  if (minutes.toString().length == 1) minutes = '0' + minutes;
+    
+  $('timer').innerHTML = minutes + ':' + seconds;
+  
   var timer = setInterval(function () {
-    var seconds = Math.floor(lost/1000 % 60);
-    var minutes = Math.floor(lost/1000/60 % 60);
+    seconds = Math.floor(lost/1000 % 60);
+    minutes = Math.floor(lost/1000/60 % 60);
     if (seconds.toString().length == 1) seconds = '0' + seconds;
     if (minutes.toString().length == 1) minutes = '0' + minutes;
     $('timer').innerHTML = minutes + ':' + seconds;
