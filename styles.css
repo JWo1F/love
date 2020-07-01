@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background: #eee;
+  font-family: trebuchet ms, sans-serif;
+  color: #0089e0;
+  text-shadow: 1px 1px 1px #004673;
+}
+
+#info {
+  text-align: center;
+  font-size: 40px;
+}
+
+#heart {
+  position: absolute;
+}
+
+#block {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #0090ff;
+  z-index: 1;
+  text-align: center;
+}
+
+#block h3, #timer {
+  color: white;
+  text-align: center;
+  font-size: 40pt;
+}
+
+#block h3:first-child {
+  margin-top: 15%;
+}
+
+#block i {
+  color: white;
+  text-align: center;
+}
+
+#block a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px dashed #eee;
+}
